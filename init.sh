@@ -1,13 +1,13 @@
 #!/bin/sh 
-DEMO="JBoss Fuse Camel Facebook Connector"
+DEMO="JBoss Fuse Camel File and JDBC Connector"
 VERSION=6.1.0
 AUTHORS="Christina Lin"
-PROJECT="git@github.com/weimeilin79/facebookconnector.git"
+PROJECT="git@github.com/weimeilin79/filenjdbc.git"
 FUSE=jboss-fuse-6.1.0.redhat-379
 FUSE_BIN=jboss-fuse-full-6.1.0.redhat-379.zip
 DEMO_HOME=./target
 FUSE_HOME=$DEMO_HOME/$FUSE
-FUSE_PROJECT=./project/fbdemo
+FUSE_PROJECT=./project/bankdemo
 FUSE_SERVER_CONF=$FUSE_HOME/etc
 FUSE_SERVER_BIN=$FUSE_HOME/bin
 SRC_DIR=./installs
@@ -24,7 +24,7 @@ chmod +x installs/*.zip
 echo
 echo "#################################################################"
 echo "##                                                             ##"   
-echo "##  Setting up the ${DEMO}         ##"
+echo "##  Setting up the ${DEMO}    ##"
 echo "##                                                             ##"   
 echo "##                                                             ##"   
 echo "##                #####  #   #  #####  #####                   ##"
@@ -35,9 +35,9 @@ echo "##                #      #####  #####  #####                   ##"
 echo "##                                                             ##"   
 echo "##                                                             ##"   
 echo "##  brought to you by,                                         ##"   
-echo "##                    ${AUTHORS}                            ##"
+echo "##                    ${AUTHORS}                              ##"
 echo "##                                                             ##"   
-echo "##  ${PROJECT}           ##"
+echo "##  ${PROJECT}                 ##"
 echo "##                                                             ##"   
 echo "#################################################################"
 echo
@@ -119,8 +119,7 @@ cd ../../$FUSE_PROJECT
 
 echo "Start compile and deploy failover camel example project to fuse"
 echo         
-mvn fabric8:deploy
-
+mvn io.fabric8:fabric8-maven-plugin:1.2.0.Beta4:deploy
 
 cd ../../target/$FUSE
 
@@ -128,7 +127,7 @@ sleep 15
 
 echo "Add profile to container"
 echo         
-sh bin/client -r 2 -d 40 'container-create-child --profile demo-facebook root testcon'
+sh bin/client -r 2 -d 40 'container-create-child --profile demo-filenjdbc --profile jboss-fuse-medium root testcon'
 
 echo "To stop the backgroud Fuse process, please go to bin and execute stop"
 echo

@@ -27,7 +27,16 @@ init.sh
 
 It will setup JBoss Fuse, install fabric, build and deploy the profile. 
 
-Runnig the demo,
+To run the demo, in browser enter http://localhost:8181 and login with ID/PWD of admin/admin
+
+Under Runtime, you will see list of containers, and click on the small icon on the righthand-side of the testcon container
+![Fabric list](https://raw.githubusercontent.com/weimeilin79/filenjdbc/master/doc/pic/01-fabric-container-list.png?raw=true)
+Inside the Container, under Camel tab, you will see the list of routes we have.
+![Container Route List](https://raw.githubusercontent.com/weimeilin79/filenjdbc/master/doc/pic/02-container-route-list.png?raw=true)
+Click on Endpoint on the lefthand-side, choose the file endpoint, and send the xml.
+![Containter Endpoint Send](https://raw.githubusercontent.com/weimeilin79/filenjdbc/master/doc/pic/03-container-send.png?raw=true)
+You will see the transfer result in the log. 
+![Container Log](https://raw.githubusercontent.com/weimeilin79/filenjdbc/master/doc/pic/04-container-log.png?raw=true)
  
 
 
