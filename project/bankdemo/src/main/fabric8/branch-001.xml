@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Bank name="ABC">
+	<Transaction no="00000016" type="Cash">
+		<CustId>A01</CustId>
+		<VipStatus>Diamond</VipStatus>
+		<Detail>
+			<amount>100</amount>
+		</Detail>
+	</Transaction>
+	<Transaction no="00000017" type="Cash">
+		<CustId>A02</CustId>
+		<VipStatus>Gold</VipStatus>
+		<Detail>
+			<amount>-20</amount>
+		</Detail>
+	</Transaction>
+	<Transaction no="00000018" type="Transfer">
+		<CustId>A02</CustId>
+		<VipStatus>Gold</VipStatus>
+		<Detail>
+			<CustId>A01</CustId>
+			<amount>20</amount>
+		</Detail>
+	</Transaction>
+</Bank>

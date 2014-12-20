@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Bank name="ABC">
+	<Transaction no="00000019" type="Transfer">
+		<CustId>A02</CustId>
+		<VipStatus>Gold</VipStatus>
+		<Detail>
+			<CustId>A01</CustId>
+			<amount>100000</amount>
+		</Detail>
+	</Transaction>
+</Bank>
