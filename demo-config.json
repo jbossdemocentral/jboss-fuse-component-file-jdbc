@@ -2,6 +2,7 @@
   "name":"File & JDBC Bank DEMO",
   "summary":"This demo demonstrates the use of File and JDBC connector in Camel, also added the use if Spilt pattern and Exception handling method",
   "author":"Christina Lin",
+  "category":"fuse",
   "level":"Beginner",
   "published":true,
   "prerequisites":"Java VM 1.6 or 1.7, Maven",
