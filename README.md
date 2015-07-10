@@ -33,8 +33,18 @@ Under Runtime, you will see list of containers, and click on the small icon on t
 ![Fabric list](https://raw.githubusercontent.com/weimeilin79/filenjdbc/master/doc/pic/01-fabric-container-list.png?raw=true)
 Inside the Container, under Camel tab, you will see the list of routes we have.
 ![Container Route List](https://raw.githubusercontent.com/weimeilin79/filenjdbc/master/doc/pic/02-container-route-list.png?raw=true)
-Click on Endpoint on the lefthand-side, choose the file endpoint, and send the xml.
-![Containter Endpoint Send](https://raw.githubusercontent.com/weimeilin79/filenjdbc/master/doc/pic/03-container-send.png?raw=true)
+
+
+To test the application, place the branch-001.xml and errorTransfer.xml files from 
+```
+project/bankdemo/src/
+```
+to 
+
+```
+target/jboss-fuse-6.2.0.redhat-133/instances/filejdbccon/inputdir
+```
+
 You will see the transfer result in the log. 
 ![Container Log](https://raw.githubusercontent.com/weimeilin79/filenjdbc/master/doc/pic/04-container-log.png?raw=true)
  
